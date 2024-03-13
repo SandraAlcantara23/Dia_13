@@ -1,21 +1,17 @@
-function calcularSerie(){
+#include <stdio.h>
 
-    const numeroIn = (document.querySelector("numeroSerie").value);
-    const serieNum = document.getElementById("serieN")
-    serieNum.numeroSerie = '';
-
-     function  listaNumero(numero){
-        if (num <= numeroIn){
-            let serN = document.createElement("h5");
-            listIrtem.textContent = numero;
-            serieNum.appendChild(listIrtem);
-            listaNumero(numero + 1);
-        }
-
-     }
-
-   listaNumero(1);
-
-
-
+int main() {
+    int n, i = 1, suma = 0;
+    
+    printf("Ingrese un número entero positivo: ");
+    scanf("%d", &n);
+    
+    while (i <= n) {
+        suma += i;
+        i++;
+    }
+    
+    printf("La suma de los primeros %d números naturales es: %d\n", n, suma);
+    
+    return 0;
 }
